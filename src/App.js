@@ -26,15 +26,15 @@ function App() {
   }
 
   const addMemoryClick =()=>{
-    dispatch(addMemory)
+    dispatch(addMemory())
   }
 
   const memoryRecallClick = ()=>{
-    dispatch(memoryRecall)
+    dispatch(memoryRecall())
   }
 
   const memoryClearClick = ()=>{
-    dispatch(memoryClear)
+    dispatch(memoryClear())
   }
 
 
@@ -56,9 +56,9 @@ function App() {
             </div>
             
             <div className="row">
-              <CalcButton value={"M+"} onClick={()=>addMemoryClick()}/>
-              <CalcButton value={"MR"} onClick={()=>memoryRecallClick()}/>
-              <CalcButton value={"MC"} onClick={()=>memoryClearClick()}/>
+              <CalcButton value={"M+"} onClick={addMemoryClick}/>
+              <CalcButton value={"MR"} onClick={memoryRecallClick}/>
+              <CalcButton value={"MC"} onClick={memoryClearClick}/>
             </div>
 
             <div className="row">
